@@ -52,7 +52,7 @@ public class SelectionIndicator : MonoBehaviour {
 			icon.sprite = unitType.icon;
 			icon.color = Color.white;
 			icon.SetNativeSize();
-			
+			transform.DOKill(true);
 			transform.DOPunchScale(Vector3.one * .4f, .2f);
 		}
 	}
