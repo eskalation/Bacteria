@@ -53,7 +53,13 @@ public class SelectionIndicator : MonoBehaviour {
 		_dragging = false;
 	}
 
+	public void Show() {
+		transform.DOKill(false);
+		transform.DOScale(Vector3.one * 1.5f, .5f).SetEase(Ease.OutBack);
+	}
+
 	public void Hide() {
+		transform.DOKill(false);
 		transform.DOScale(Vector3.zero, .3f).SetEase(Ease.OutQuad);
 
 		Invoke("Hidden", _particles.startLifetime);

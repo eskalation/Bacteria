@@ -18,7 +18,7 @@ public class ColorButton : MonoBehaviour, IPointerDownHandler, IPointerExitHandl
 
 		_instantiatedBacteria = Instantiate( indicator, parentIn, false) as SelectionIndicator;
 		_instantiatedBacteria.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
-		_instantiatedBacteria.transform.DOScale(Vector3.one *1.5f, .5f).SetEase(Ease.OutBack);
+		_instantiatedBacteria.Show();
 		_instantiatedBacteria.AddBacteriaElement(element);
 		_instantiatedBacteria.StartDrag();
 		_leftArea = false;
