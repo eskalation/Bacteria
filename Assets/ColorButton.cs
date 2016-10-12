@@ -3,30 +3,47 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using DG.Tweening;
 
 public class ColorButton : MonoBehaviour, IPointerDownHandler, IPointerExitHandler, IPointerUpHandler {
 	public Image colorFill;
 	public BacteriaElement element;
 
-	public Bacteria bacteriaPrefab;
-
-	private Bacteria _instantiatedBacteria;
+	private SelectionIndicator _instantiatedBacteria;
 	private bool _leftArea;
 
 	public void OnPointerDown(PointerEventData data ) {
-		_instantiatedBacteria = Instantiate( bacteriaPrefab, transform.position, Quaternion.identity) as Bacteria;
+		SelectionIndicator indicator = PlayerSegmentManager.instance.indicatorPrefab;
+		Transform parentIn = PlayerSegmentManager.instance.canvasTransform;
 
+		_instantiatedBacteria = Instantiate( indicator, parentIn, false) as SelectionIndicator;
+		_instantiatedBacteria.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+		_instantiatedBacteria.transform.DOScale(Vector3.one *1.5f, .5f).SetEase(Ease.OutBack);
+		_instantiatedBacteria.AddBacteriaElement(element);
+		_instantiatedBacteria.StartDrag();
 		_leftArea = false;
 	}
 
 	public void OnPointerExit(PointerEventData eventData) {
+		Debug.Log("EXIT!");
+
 		_leftArea = true;
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
+		Debug.Log("UP!");
+
 		if(!_leftArea) {
-			Destroy(_instantiatedBacteria);
 		}
+
+		_instantiatedBacteria.StopDrag();
+		_instantiatedBacteria.Hide();
+		_instantiatedBacteria.OnHidden += DestroyBacteria;
+	}
+
+	void DestroyBacteria() {
+		_instantiatedBacteria.OnHidden -= DestroyBacteria;
+		Destroy(_instantiatedBacteria.gameObject);
 	}
 
 	public void OnValidate() {

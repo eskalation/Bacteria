@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Bacteria : MonoBehaviour {
-	public BacteriaElement bacteriaType;
-	public UnitType unitType;
+	BacteriaElement _bacteriaElement;
+	UnitType _unitType;
 
 	float _damage;
 	float _health;
@@ -11,8 +11,14 @@ public class Bacteria : MonoBehaviour {
 
 	private SpriteRenderer _renderer;
 
-	public void Start() {
-		//_renderer = GetComponent<SpriteRenderer>();
+	public void Awake() {
+		_renderer = GetComponent<SpriteRenderer>();
 		//_renderer.color = bacteriaType.color;
+	}
+
+	public void SetBacteriaElement(BacteriaElement element) {
+		_bacteriaElement = element;
+
+		_renderer.color = _bacteriaElement.color;
 	}
 }

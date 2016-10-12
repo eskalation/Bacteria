@@ -6,6 +6,7 @@ public class UnitType : ScriptableObject {
 	[Header("Info")]
 	public string namePostFix;
 	public int cost;
+	public Sprite icon;
 
 	[Header("Base Stats")]
 	public float damage;

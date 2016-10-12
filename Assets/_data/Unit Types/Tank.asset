@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namePostFix: Tank
   cost: 0
+  icon: {fileID: 21300000, guid: b402c27092e0f44cc9aa3ae488ab4dfc, type: 3}
   damage: 100
   attackSpeed: 1
   health: 50

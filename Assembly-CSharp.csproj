@@ -46,15 +46,36 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ColorButton.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
+     <Compile Include="Assets\PlayerSegmentManager.cs" />
      <Compile Include="Assets\Script\Bacteria.cs" />
      <Compile Include="Assets\Script\BacteriaElement.cs" />
      <Compile Include="Assets\Script\HealingUnitType.cs" />
      <Compile Include="Assets\Script\UnitType.cs" />
+     <Compile Include="Assets\SelectionIndicator.cs" />
+     <Compile Include="Assets\SkillButton.cs" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/brianlauridsen/Documents/Arbejde/Personal/BacteriaFight/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/brianlauridsen/Documents/Arbejde/Personal/BacteriaFight/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/brianlauridsen/Documents/Arbejde/Personal/BacteriaFight/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/brianlauridsen/Documents/Arbejde/Personal/BacteriaFight/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
