@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   name: 
-  color: {r: 1, g: 0, b: 0.8896551, a: 1}
+  color: {r: 0.64705884, g: 0.4509804, b: 0.6901961, a: 1}
   strongAgainst:
   - {fileID: 11400000, guid: 77007489f0a474a469b6867578679d12, type: 2}
   weakAgainst: []

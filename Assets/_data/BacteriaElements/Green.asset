@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: 
   name: 
-  color: {r: 0, g: 1, b: 0.2965517, a: 1}
+  color: {r: 0.5058824, g: 0.7490196, b: 0.40784314, a: 1}
   strongAgainst:
   - {fileID: 11400000, guid: 11eb40e371dc044b59a65678b6f05f3b, type: 2}
   weakAgainst:
