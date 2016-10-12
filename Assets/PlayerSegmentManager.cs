@@ -7,6 +7,8 @@ public class PlayerSegmentManager : MonoBehaviour {
 	public SelectionIndicator indicatorPrefab;
 	public Transform canvasTransform;
 
+	public SelectionIndicator currenctIndicator;
+
 	void Awake() {
 		if(instance == null) {
 			instance = this;

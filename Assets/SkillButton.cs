@@ -16,6 +16,12 @@ public class SkillButton : MonoBehaviour, IPointerEnterHandler {
 	}
 
 	public void OnPointerEnter(PointerEventData eventData) {
-		
+		Debug.Log("ENTER");
+
+		SelectionIndicator indicator = PlayerSegmentManager.instance.currenctIndicator;
+
+		if(indicator != null) {
+			indicator.AddUnitType(unitType);
+		}
 	}
 }

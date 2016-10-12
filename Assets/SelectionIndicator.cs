@@ -11,7 +11,6 @@ public class SelectionIndicator : MonoBehaviour {
 
 	public Action OnHidden;
 
-
 	private ParticleSystem _particles;
 	private BacteriaElement _element;
 	private UnitType _unitType;
@@ -26,17 +25,28 @@ public class SelectionIndicator : MonoBehaviour {
 	}
 
 	public void AddBacteriaElement(BacteriaElement element) {
-		_element = element;
+		if(_dragging) {
+			_element = element;
 
-		_particles.startColor = element.color;
-		background.color = element.color;
+			_particles.startColor = element.color;
+			background.color = element.color;
+		}
 	}
 
 	public void AddUnitType(UnitType unitType) {
-		_unitType = unitType;
-
-		icon.sprite = unitType.icon;
-		icon.SetNativeSize();
+		if(_dragging) {
+			if(unitType == _unitType) {
+				return;
+			}
+			
+			_unitType = unitType;
+			
+			icon.sprite = unitType.icon;
+			icon.color = Color.white;
+			icon.SetNativeSize();
+			
+			transform.DOPunchScale(Vector3.one * .4f, .2f);
+		}
 	}
 
 	public void StartDrag() {

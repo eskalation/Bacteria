@@ -16,11 +16,15 @@ public class ColorButton : MonoBehaviour, IPointerDownHandler, IPointerExitHandl
 		SelectionIndicator indicator = PlayerSegmentManager.instance.indicatorPrefab;
 		Transform parentIn = PlayerSegmentManager.instance.canvasTransform;
 
+
 		_instantiatedBacteria = Instantiate( indicator, parentIn, false) as SelectionIndicator;
 		_instantiatedBacteria.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+		_instantiatedBacteria.StartDrag();
 		_instantiatedBacteria.Show();
 		_instantiatedBacteria.AddBacteriaElement(element);
-		_instantiatedBacteria.StartDrag();
+
+		PlayerSegmentManager.instance.currenctIndicator = _instantiatedBacteria;
+
 		_leftArea = false;
 	}
 
