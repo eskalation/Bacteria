@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/BacteriaElement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ColorButton.cs">
     <Files>
-      <File FileName="Assets/Script/Bacteria.cs" Line="5" Column="18" />
-      <File FileName="Assets/Script/UnitType.cs" Line="7" Column="2" />
-      <File FileName="Assets/Script/HealingUnitType.cs" Line="6" Column="25" />
-      <File FileName="Assets/Script/BacteriaElement.cs" Line="8" Column="24" />
+      <File FileName="Assets/Script/Bacteria.cs" Line="17" Column="3" />
+      <File FileName="Assets/Script/UnitType.cs" Line="6" Column="15" />
+      <File FileName="Assets/Script/HealingUnitType.cs" Line="5" Column="36" />
+      <File FileName="Assets/Script/BacteriaElement.cs" Line="9" Column="2" />
+      <File FileName="Assets/ColorButton.cs" Line="6" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
