@@ -24,6 +24,14 @@ public class SelectionIndicator : MonoBehaviour {
 		_particles = GetComponent<ParticleSystem>();
 	}
 
+	void Start() {
+		Canvas canvas = gameObject.AddComponent<Canvas>();
+
+		canvas.overrideSorting = true;
+		canvas.sortingOrder = 100;
+
+	}
+
 	public void AddBacteriaElement(BacteriaElement element) {
 		if(_dragging) {
 			_element = element;
